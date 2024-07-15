@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project test_time_filter ****
+
+make all 
+Info: Building ../test_time_filter_bsp/
+make --no-print-directory -C ../test_time_filter_bsp/
+[BSP build complete]
+[test_time_filter build complete]
+
+**** Build Finished ****

@@ -1,0 +1,30 @@
+
+**** Build of configuration Nios II for project gaussian_filter_base ****
+
+make all 
+Info: Building ../gaussian_filter_base_bsp/
+make --no-print-directory -C ../gaussian_filter_base_bsp/
+[BSP build complete]
+[gaussian_filter_base build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project gaussian_filter_base ****
+
+make all 
+Info: Building ../gaussian_filter_base_bsp/
+make --no-print-directory -C ../gaussian_filter_base_bsp/
+[BSP build complete]
+[gaussian_filter_base build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project gaussian_filter_base ****
+
+make all 
+Info: Building ../gaussian_filter_base_bsp/
+make --no-print-directory -C ../gaussian_filter_base_bsp/
+[BSP build complete]
+[gaussian_filter_base build complete]
+
+**** Build Finished ****

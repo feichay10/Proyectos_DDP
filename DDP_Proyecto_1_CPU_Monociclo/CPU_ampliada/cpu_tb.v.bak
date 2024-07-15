@@ -1,0 +1,91 @@
+/*
+`timescale 1 ns / 10 ps
+
+module cpu_tb;
+
+
+reg clk, reset;
+wire [5:0] opcode;
+
+// generación de reloj clk
+always //siempre activo, no hay condición de activación
+begin
+  clk = 1'b1;
+  #30;
+  clk = 1'b0;
+  #30;
+end
+
+// instanciación del procesador
+cpu micpu(clk, reset, opcode);
+
+initial
+begin
+  $dumpfile("cpu_tb.vcd");
+  $dumpvars;
+  reset = 1;  //a partir del flanco de subida del reset empieza el funcionamiento normal
+  #10;
+  reset = 0;  //bajamos el reset 
+end
+
+initial
+begin
+
+  #(14*60);  //Esperamos 10 ciclos 
+  $finish;
+end
+
+endmodule
+*/
+`timescale 1 ns / 10 ps
+
+module cpu_tb;
+
+
+reg clk, reset, ir1, ir2, ir3, ir4;
+wire [7:0] opcode;
+
+
+
+// generación de reloj clk
+always //siempre activo, no hay condición de activación
+begin
+  clk = 1'b1;
+  #30;
+  clk = 1'b0;
+  #30;
+end
+
+// instanciación del procesador
+cpu micpu(clk, reset, ir1, ir2, ir3, ir4, opcode);
+
+initial
+begin
+  $dumpfile("cpu_tb.vcd");
+  $dumpvars;
+  //$dumpvars(0, micpu.cd_cpu.ban_reg.regb[1], micpu.cd_cpu.ban_reg.regb[2], micpu.cd_cpu.ban_reg.regb[3], micpu.cd_cpu.pila.stack[0], micpu.cd_cpu.pila.stack[1], micpu.cd_cpu.pila.stack[2]);
+  reset = 1;  //a partir del flanco de subida del reset empieza el funcionamiento normal
+  #10;
+  reset = 0;  //bajamos el reset 
+  
+end
+
+initial
+begin
+  ir1 = 1'b0;
+  ir2 = 1'b1;
+  ir3 = 1'b1;
+  ir4 = 1'b1;
+  #20
+  ir1 = 1'b1;
+  #40
+  ir2 = 1'b0;
+  #20
+  ir2 = 1'b1; 
+  #20
+
+  #(30*90);  
+  $finish;
+end
+
+endmodule

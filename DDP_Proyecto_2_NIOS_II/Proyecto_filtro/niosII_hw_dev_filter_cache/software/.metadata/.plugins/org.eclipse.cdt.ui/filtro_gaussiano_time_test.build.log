@@ -1,0 +1,7 @@
+
+**** Clean-only build of configuration Nios II for project filtro_gaussiano_time_test ****
+
+make clean 
+[filtro_gaussiano_time_test clean complete]
+
+**** Build Finished ****

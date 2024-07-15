@@ -1,0 +1,11 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Desarrollo del filtro de convolución, filtro Gaussiano}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Implementación del filtro Gaussiano}{2}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Estudios y resultados}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}CPU con mayores prestaciones}{4}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Hardware para multiplicación y división}{5}{section.3.2}%
+\contentsline {section}{\numberline {3.3}CPU con mayores prestaciones y hardware para multiplicación y división}{6}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Caché para datos}{7}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Tightly coupled memory}{8}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{9}{chapter.5}%

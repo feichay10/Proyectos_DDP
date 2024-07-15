@@ -1,0 +1,665 @@
+Analysis & Synthesis report for cpu
+Fri Jul 12 17:41:56 2024
+Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Logic Cells Representing Combinational Loops
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: cd:CaminoDeDatos|mux2:seleccionar_incremento
+ 15. Parameter Settings for User Entity Instance: cd:CaminoDeDatos|mux2:seleccionar_salto
+ 16. Parameter Settings for User Entity Instance: cd:CaminoDeDatos|mux2:seleccionar_instruc
+ 17. Parameter Settings for User Entity Instance: cd:CaminoDeDatos|mux2:entrada_pc
+ 18. Parameter Settings for User Entity Instance: cd:CaminoDeDatos|mux2:selector_zero
+ 19. Parameter Settings for User Entity Instance: cd:CaminoDeDatos|mux2:entrada_alu
+ 20. Parameter Settings for User Entity Instance: cd:CaminoDeDatos|registro:pc
+ 21. Port Connectivity Checks: "cd:CaminoDeDatos|mux2:seleccionar_incremento"
+ 22. Port Connectivity Checks: "cd:CaminoDeDatos"
+ 23. Port Connectivity Checks: "interfaz_led:interfaz_led_1"
+ 24. Port Connectivity Checks: "ffd:ffd_0"
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+ 27. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                       ;
++------------------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Jul 12 17:41:56 2024         ;
+; Quartus II 32-bit Version          ; 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; cpu                                           ;
+; Top-level Entity Name              ; cpu                                           ;
+; Family                             ; Cyclone II                                    ;
+; Total logic elements               ; 768                                           ;
+;     Total combinational functions  ; 656                                           ;
+;     Dedicated logic registers      ; 317                                           ;
+; Total registers                    ; 317                                           ;
+; Total pins                         ; 13                                            ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0                                             ;
+; Embedded Multiplier 9-bit elements ; 0                                             ;
+; Total PLLs                         ; 0                                             ;
++------------------------------------+-----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                                      ; cpu                ; cpu                ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++------------------------------------------------+-----------------+------------------------------+------------------------------------------------+---------+
+; File Name with User-Entered Path               ; Used in Netlist ; File Type                    ; File Name with Absolute Path                   ; Library ;
++------------------------------------------------+-----------------+------------------------------+------------------------------------------------+---------+
+; ../CPU_base/uc.v                               ; yes             ; User Verilog HDL File        ; /home/alumno/Escritorio/CPU_base/uc.v          ;         ;
+; ../CPU_base/memprog.v                          ; yes             ; User Verilog HDL File        ; /home/alumno/Escritorio/CPU_base/memprog.v     ;         ;
+; ../CPU_base/cpu.v                              ; yes             ; User Verilog HDL File        ; /home/alumno/Escritorio/CPU_base/cpu.v         ;         ;
+; ../CPU_base/componentes.v                      ; yes             ; User Verilog HDL File        ; /home/alumno/Escritorio/CPU_base/componentes.v ;         ;
+; ../CPU_base/cd.v                               ; yes             ; User Verilog HDL File        ; /home/alumno/Escritorio/CPU_base/cd.v          ;         ;
+; ../CPU_base/alu.v                              ; yes             ; User Verilog HDL File        ; /home/alumno/Escritorio/CPU_base/alu.v         ;         ;
+; /home/alumno/Escritorio/CPU_base/progfile.dat  ; yes             ; Auto-Found Unspecified File  ; /home/alumno/Escritorio/CPU_base/progfile.dat  ;         ;
+; /home/alumno/Escritorio/CPU_base/regfile.dat   ; yes             ; Auto-Found Unspecified File  ; /home/alumno/Escritorio/CPU_base/regfile.dat   ;         ;
+; /home/alumno/Escritorio/CPU_base/stackfile.dat ; yes             ; Auto-Found Unspecified File  ; /home/alumno/Escritorio/CPU_base/stackfile.dat ;         ;
++------------------------------------------------+-----------------+------------------------------+------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 768   ;
+;                                             ;       ;
+; Total combinational functions               ; 656   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 556   ;
+;     -- 3 input functions                    ; 81    ;
+;     -- <=2 input functions                  ; 19    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 628   ;
+;     -- arithmetic mode                      ; 28    ;
+;                                             ;       ;
+; Total registers                             ; 317   ;
+;     -- Dedicated logic registers            ; 317   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 13    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out                             ; 317   ;
+; Total fan-out                               ; 3314  ;
+; Average fan-out                             ; 3.36  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+--------------+
+; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                ; Library Name ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+--------------+
+; |cpu                                               ; 656 (0)           ; 317 (0)      ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |cpu                                               ;              ;
+;    |cd:CaminoDeDatos|                              ; 626 (1)           ; 314 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|cd:CaminoDeDatos                              ;              ;
+;       |alu:alu1|                                   ; 122 (122)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|cd:CaminoDeDatos|alu:alu1                     ;              ;
+;       |ffd:ffzi|                                   ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|cd:CaminoDeDatos|ffd:ffzi                     ;              ;
+;       |ffd:ffz|                                    ; 7 (7)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|cd:CaminoDeDatos|ffd:ffz                      ;              ;
+;       |memprog:mem_prog|                           ; 42 (42)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|cd:CaminoDeDatos|memprog:mem_prog             ;              ;
+;       |mux2:entrada_alu|                           ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|cd:CaminoDeDatos|mux2:entrada_alu             ;              ;
+;       |mux2:entrada_pc|                            ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|cd:CaminoDeDatos|mux2:entrada_pc              ;              ;
+;       |mux2:seleccionar_salto|                     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|cd:CaminoDeDatos|mux2:seleccionar_salto       ;              ;
+;       |regfile:ban_reg|                            ; 131 (131)         ; 128 (128)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|cd:CaminoDeDatos|regfile:ban_reg              ;              ;
+;       |registro:pc|                                ; 7 (7)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|cd:CaminoDeDatos|registro:pc                  ;              ;
+;       |stack:pila|                                 ; 290 (290)         ; 174 (174)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|cd:CaminoDeDatos|stack:pila                   ;              ;
+;       |sum:incremento_instruc|                     ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|cd:CaminoDeDatos|sum:incremento_instruc       ;              ;
+;    |ffd:ffd_0|                                     ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|ffd:ffd_0                                     ;              ;
+;    |ffi:ffi_0|                                     ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|ffi:ffi_0                                     ;              ;
+;    |interfaz_led:interfaz_led_1|                   ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|interfaz_led:interfaz_led_1                   ;              ;
+;    |mapeo_dis:mapeo_dispositivos|                  ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mapeo_dis:mapeo_dispositivos                  ;              ;
+;    |registro_interrupcion:registro_interrupcion_1| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|registro_interrupcion:registro_interrupcion_1 ;              ;
+;    |uc:UnidadDeControl|                            ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|uc:UnidadDeControl                            ;              ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                    ;
++----------------------------------------------------+----------------------------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                                      ; Free of Timing Hazards ;
++----------------------------------------------------+----------------------------------------------------------+------------------------+
+; interfaz_led:interfaz_led_1|registro_leds[0]       ; mapeo_dis:mapeo_dispositivos|dispositivo_write_enable[0] ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                                                          ;                        ;
++----------------------------------------------------+----------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                      ;
++---------------------------------------------------------------+---+
+; Logic Cell Name                                               ;   ;
++---------------------------------------------------------------+---+
+; registro_interrupcion:registro_interrupcion_1|next_ir[0]~reg0 ;   ;
+; Number of logic cells representing combinational loops        ; 1 ;
++---------------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                       ;
++------------------------------------------------------------+---------------------------------------------+
+; Register name                                              ; Reason for Removal                          ;
++------------------------------------------------------------+---------------------------------------------+
+; registro_interrupcion:registro_interrupcion_1|next_ir[1,2] ; Stuck at GND due to stuck port data_in      ;
+; cd:CaminoDeDatos|stack:pila|stack_pointer[4..31]           ; Lost fanout                                 ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~144                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~160                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~128                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~176                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~96                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~80                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~64                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~112                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~145                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~177                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~97                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~65                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~129                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~161                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~113                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~81                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~162                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~178                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~82                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~66                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~130                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~146                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~114                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~98                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~163                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~147                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~131                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~179                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~99                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~83                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~67                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~115                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~148                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~180                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~100                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~68                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~132                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~164                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~116                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~84                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~165                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~181                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~85                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~69                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~133                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~149                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~117                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~101                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~166                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~150                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~134                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~182                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~102                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~86                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~70                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~118                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~151                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~183                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~103                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~71                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~135                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~167                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~119                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~87                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~168                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~184                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~88                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~72                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~136                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~152                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~120                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~104                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~169                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~153                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~137                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~185                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~105                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~89                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~73                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~121                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~154                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~186                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~106                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~74                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~138                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~170                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~122                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~90                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~171                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~187                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~91                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~75                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~139                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~155                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~123                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~107                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~172                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~156                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~140                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~188                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~108                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~92                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~76                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~124                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~157                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~189                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~109                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~77                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~141                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~173                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~125                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~93                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~94                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~78                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~174                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~190                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~142                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~158                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~126                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~110                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~111                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~95                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~79                   ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~127                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~175                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~159                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~143                  ; Stuck at GND due to stuck port clock_enable ;
+; cd:CaminoDeDatos|regfile:ban_reg|regb~191                  ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 158                    ;                                             ;
++------------------------------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 317   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 7     ;
+; Number of registers using Asynchronous Clear ; 14    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 142   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; ffi:ffi_0|next_ire                     ; 1       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |cpu|cd:CaminoDeDatos|registro:pc|q[1]             ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |cpu|cd:CaminoDeDatos|registro:pc|q[8]             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |cpu|cd:CaminoDeDatos|stack:pila|stack_out[4]      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |cpu|cd:CaminoDeDatos|stack:pila|stack_pointer[16] ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |cpu|cd:CaminoDeDatos|alu:alu1|Mux4                ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |cpu|cd:CaminoDeDatos|alu:alu1|Add0                ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |cpu|cd:CaminoDeDatos|alu:alu1|Add0                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cd:CaminoDeDatos|mux2:seleccionar_incremento ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 10    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cd:CaminoDeDatos|mux2:seleccionar_salto ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; WIDTH          ; 10    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cd:CaminoDeDatos|mux2:seleccionar_instruc ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; WIDTH          ; 10    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cd:CaminoDeDatos|mux2:entrada_pc ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; WIDTH          ; 10    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cd:CaminoDeDatos|mux2:selector_zero ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; WIDTH          ; 1     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cd:CaminoDeDatos|mux2:entrada_alu ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cd:CaminoDeDatos|registro:pc ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; WIDTH          ; 10    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "cd:CaminoDeDatos|mux2:seleccionar_incremento" ;
++----------+-------+----------+--------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                    ;
++----------+-------+----------+--------------------------------------------+
+; d0[9..1] ; Input ; Info     ; Stuck at GND                               ;
+; d0[0]    ; Input ; Info     ; Stuck at VCC                               ;
+; d1       ; Input ; Info     ; Stuck at GND                               ;
++----------+-------+----------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cd:CaminoDeDatos"                                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; overflow  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; underflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "interfaz_led:interfaz_led_1"                                                                                                                                                ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                               ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; led_output ; Output ; Warning  ; Output or bidir port (2 bits) is smaller than the port expression (6 bits) it drives.  The 4 most-significant bit(s) in the port expression will be connected to GND. ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------+
+; Port Connectivity Checks: "ffd:ffd_0"   ;
++-------+-------+----------+--------------+
+; Port  ; Type  ; Severity ; Details      ;
++-------+-------+----------+--------------+
+; carga ; Input ; Info     ; Stuck at VCC ;
++-------+-------+----------+--------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Jul 12 17:41:52 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu -c cpu
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /home/alumno/Escritorio/CPU_base/cpu_tb.v
+    Info (12023): Found entity 1: cpu_tb
+Info (12021): Found 1 design units, including 1 entities, in source file /home/alumno/Escritorio/CPU_base/uc.v
+    Info (12023): Found entity 1: uc
+Info (12021): Found 1 design units, including 1 entities, in source file /home/alumno/Escritorio/CPU_base/memprog.v
+    Info (12023): Found entity 1: memprog
+Info (12021): Found 1 design units, including 1 entities, in source file /home/alumno/Escritorio/CPU_base/cpu.v
+    Info (12023): Found entity 1: cpu
+Info (12021): Found 11 design units, including 11 entities, in source file /home/alumno/Escritorio/CPU_base/componentes.v
+    Info (12023): Found entity 1: regfile
+    Info (12023): Found entity 2: ffi
+    Info (12023): Found entity 3: registro_interrupcion
+    Info (12023): Found entity 4: codificador
+    Info (12023): Found entity 5: stack
+    Info (12023): Found entity 6: sum
+    Info (12023): Found entity 7: registro
+    Info (12023): Found entity 8: mux2
+    Info (12023): Found entity 9: ffd
+    Info (12023): Found entity 10: mapeo_dis
+    Info (12023): Found entity 11: interfaz_led
+Info (12021): Found 1 design units, including 1 entities, in source file /home/alumno/Escritorio/CPU_base/cd.v
+    Info (12023): Found entity 1: cd
+Info (12021): Found 1 design units, including 1 entities, in source file /home/alumno/Escritorio/CPU_base/alu.v
+    Info (12023): Found entity 1: alu
+Info (12127): Elaborating entity "cpu" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at cpu.v(28): truncated value with size 6 to match size of target (2)
+Info (12128): Elaborating entity "registro_interrupcion" for hierarchy "registro_interrupcion:registro_interrupcion_1"
+Info (12128): Elaborating entity "codificador" for hierarchy "codificador:codificador_senal"
+Info (12128): Elaborating entity "ffi" for hierarchy "ffi:ffi_0"
+Info (12128): Elaborating entity "ffd" for hierarchy "ffd:ffd_0"
+Info (12128): Elaborating entity "mapeo_dis" for hierarchy "mapeo_dis:mapeo_dispositivos"
+Info (12128): Elaborating entity "interfaz_led" for hierarchy "interfaz_led:interfaz_led_1"
+Warning (10240): Verilog HDL Always Construct warning at componentes.v(187): inferring latch(es) for variable "valor", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at componentes.v(187): inferring latch(es) for variable "registro_leds", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "registro_leds[0]" at componentes.v(187)
+Info (12128): Elaborating entity "uc" for hierarchy "uc:UnidadDeControl"
+Info (12128): Elaborating entity "cd" for hierarchy "cd:CaminoDeDatos"
+Info (12128): Elaborating entity "mux2" for hierarchy "cd:CaminoDeDatos|mux2:seleccionar_incremento"
+Info (12128): Elaborating entity "mux2" for hierarchy "cd:CaminoDeDatos|mux2:selector_zero"
+Info (12128): Elaborating entity "mux2" for hierarchy "cd:CaminoDeDatos|mux2:entrada_alu"
+Info (12128): Elaborating entity "sum" for hierarchy "cd:CaminoDeDatos|sum:incremento_instruc"
+Info (12128): Elaborating entity "stack" for hierarchy "cd:CaminoDeDatos|stack:pila"
+Info (12128): Elaborating entity "registro" for hierarchy "cd:CaminoDeDatos|registro:pc"
+Info (12128): Elaborating entity "memprog" for hierarchy "cd:CaminoDeDatos|memprog:mem_prog"
+Warning (10850): Verilog HDL warning at memprog.v(11): number of words (954) in memory file does not match the number of elements in the address range [0:1023]
+Warning (10030): Net "mem.data_a" at memprog.v(7) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "mem.waddr_a" at memprog.v(7) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "mem.we_a" at memprog.v(7) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "regfile" for hierarchy "cd:CaminoDeDatos|regfile:ban_reg"
+Info (12128): Elaborating entity "alu" for hierarchy "cd:CaminoDeDatos|alu:alu1"
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276007): RAM logic "cd:CaminoDeDatos|regfile:ban_reg|regb" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "cd:CaminoDeDatos|stack:pila|stack" is uninferred due to asynchronous read logic
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/alumno/Escritorio/PractQuartus/db/cpu.ram0_memprog_5f24dd89.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch interfaz_led:interfaz_led_1|registro_leds[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cd:CaminoDeDatos|registro:pc|q[4]
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "opcode_salida[0]" is stuck at GND
+    Warning (13410): Pin "opcode_salida[1]" is stuck at GND
+    Warning (13410): Pin "io_output[1]" is stuck at GND
+Info (17049): 28 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file /home/alumno/Escritorio/PractQuartus/output_files/cpu.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 958 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 945 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 335 megabytes
+    Info: Processing ended: Fri Jul 12 17:41:56 2024
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/alumno/Escritorio/PractQuartus/output_files/cpu.map.smsg.
+
+

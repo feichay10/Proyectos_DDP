@@ -1,0 +1,144 @@
+# do cpu_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /opt/altera/12.1sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/12.1sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+/home/alumno/Escritorio/CPU_base {/home/alumno/Escritorio/CPU_base/uc.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module uc
+# 
+# Top level modules:
+# 	uc
+# vlog -vlog01compat -work work +incdir+/home/alumno/Escritorio/CPU_base {/home/alumno/Escritorio/CPU_base/cpu.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module cpu
+# 
+# Top level modules:
+# 	cpu
+# vlog -vlog01compat -work work +incdir+/home/alumno/Escritorio/CPU_base {/home/alumno/Escritorio/CPU_base/cd.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module cd
+# 
+# Top level modules:
+# 	cd
+# vlog -vlog01compat -work work +incdir+/home/alumno/Escritorio/CPU_base {/home/alumno/Escritorio/CPU_base/alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -vlog01compat -work work +incdir+/home/alumno/Escritorio/CPU_base {/home/alumno/Escritorio/CPU_base/memprog.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module memprog
+# 
+# Top level modules:
+# 	memprog
+# vlog -vlog01compat -work work +incdir+/home/alumno/Escritorio/CPU_base {/home/alumno/Escritorio/CPU_base/componentes.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module regfile
+# -- Compiling module ffi
+# -- Compiling module registro_interrupcion
+# -- Compiling module codificador
+# -- Compiling module stack
+# -- Compiling module sum
+# -- Compiling module registro
+# -- Compiling module mux2
+# -- Compiling module ffd
+# -- Compiling module mapeo_dis
+# -- Compiling module interfaz_led
+# 
+# Top level modules:
+# 	regfile
+# 	ffi
+# 	registro_interrupcion
+# 	codificador
+# 	stack
+# 	sum
+# 	registro
+# 	mux2
+# 	ffd
+# 	mapeo_dis
+# 	interfaz_led
+# 
+# vlog -vlog01compat -work work +incdir+/home/alumno/Escritorio/PractQuartus/../CPU_base {/home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  cpu_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps cpu_tb 
+# Loading work.cpu_tb
+# Loading work.cpu
+# Loading work.registro_interrupcion
+# Loading work.codificador
+# Loading work.ffi
+# Loading work.ffd
+# Loading work.mapeo_dis
+# Loading work.interfaz_led
+# Loading work.uc
+# Loading work.cd
+# Loading work.mux2
+# Loading work.sum
+# Loading work.stack
+# Loading work.registro
+# Loading work.memprog
+# Loading work.regfile
+# Loading work.alu
+# ** Warning: (vsim-3017) /home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v(19): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /cpu_tb/micpu
+# ** Warning: (vsim-3722) /home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v(19): [TFMPC] - Missing connection for port 'io_output'.
+# ** Warning: (vsim-3015) /home/alumno/Escritorio/CPU_base/cpu.v(21): [PCDPC] - Port size (2 or 2) does not match connection size (6) for port 'led_output'. The port definition is at: /home/alumno/Escritorio/CPU_base/componentes.v(182).
+#         Region: /cpu_tb/micpu/interfaz_led_1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $finish    : /home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v(37)
+#    Time: 2720 ps  Iteration: 0  Instance: /cpu_tb
+# 1
+# Break in Module cpu_tb at /home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v line 37
+# Simulation Breakpoint: 1
+# Break in Module cpu_tb at /home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v line 37
+# MACRO ./cpu_run_msim_rtl_verilog.do PAUSED at line 22
+add wave -position end  sim:/cpu_tb/micpu/codificador_senal/ir1
+add wave -position end  sim:/cpu_tb/micpu/CaminoDeDatos/salida_pc
+restart
+# Closing VCD file "cpu_tb.vcd"
+# ** Warning: (vsim-3017) /home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v(19): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /cpu_tb/micpu
+# ** Warning: (vsim-3722) /home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v(19): [TFMPC] - Missing connection for port 'io_output'.
+# ** Warning: (vsim-3015) /home/alumno/Escritorio/CPU_base/cpu.v(21): [PCDPC] - Port size (2 or 2) does not match connection size (6) for port 'led_output'. The port definition is at: /home/alumno/Escritorio/CPU_base/componentes.v(182).
+#         Region: /cpu_tb/micpu/interfaz_led_1
+add wave -position end  sim:/cpu_tb/micpu/CaminoDeDatos/reg_2
+add wave -position end  sim:/cpu_tb/micpu/CaminoDeDatos/reg_1
+add wave -position end  sim:/cpu_tb/micpu/CaminoDeDatos/salida_pila
+run
+# ** Note: $finish    : /home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v(37)
+#    Time: 2720 ps  Iteration: 0  Instance: /cpu_tb
+# 1
+# Break in Module cpu_tb at /home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v line 37
+# status=1
+# invalid command name "::.main_pane.source.interior.cs.body.editor"
+restart
+# Closing VCD file "cpu_tb.vcd"
+# ** Warning: (vsim-3017) /home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v(19): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /cpu_tb/micpu
+# ** Warning: (vsim-3722) /home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v(19): [TFMPC] - Missing connection for port 'io_output'.
+# ** Warning: (vsim-3015) /home/alumno/Escritorio/CPU_base/cpu.v(21): [PCDPC] - Port size (2 or 2) does not match connection size (6) for port 'led_output'. The port definition is at: /home/alumno/Escritorio/CPU_base/componentes.v(182).
+#         Region: /cpu_tb/micpu/interfaz_led_1
+run
+# ** Note: $finish    : /home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v(37)
+#    Time: 2720 ps  Iteration: 0  Instance: /cpu_tb
+# 1
+# Break in Module cpu_tb at /home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v line 37

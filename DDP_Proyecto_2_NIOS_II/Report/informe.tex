@@ -1,0 +1,228 @@
+\documentclass[11pt]{report}
+
+% Paquetes y configuraciones adicionales
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titling}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{wasysym}
+\usepackage{tikzsymbols}
+\usepackage{fancyvrb}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\usepackage[spanish]{babel}
+
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}
+}
+
+% Configura los márgenes
+\geometry{
+  left=2cm,   % Ajusta este valor al margen izquierdo deseado
+  right=2cm,  % Ajusta este valor al margen derecho deseado
+  top=3cm,
+  bottom=3cm,
+}
+
+% Configuración de los títulos de las secciones
+\titlespacing{\section}{0pt}{\parskip}{\parskip}
+\titlespacing{\subsection}{0pt}{\parskip}{\parskip}
+\titlespacing{\subsubsection}{0pt}{\parskip}{\parskip}
+
+% Redefinir el formato de los capítulos y añadir un punto después del número
+\makeatletter
+\renewcommand{\@makechapterhead}[1]{%
+  \vspace*{0\p@} % Ajusta este valor para el espaciado deseado antes del título del capítulo
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+        \huge\bfseries \thechapter.\ % Añade un punto después del número
+    \fi
+    \interlinepenalty\@M
+    #1\par\nobreak
+    \vspace{10pt} % Ajusta este valor para el espacio deseado después del título del capítulo
+  }}
+\makeatother
+
+% Configura para que cada \chapter no comience en una pagina nueva
+\makeatletter
+\renewcommand\chapter{\@startsection{chapter}{0}{\z@}%
+    {-3.5ex \@plus -1ex \@minus -.2ex}%
+    {2.3ex \@plus.2ex}%
+    {\normalfont\Large\bfseries}}
+\makeatother
+
+% Configurar los colores para el código
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% Configurar el estilo para el código
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},   
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
+%==============================================================================
+% Cosas para la documentación LateX
+% % Sangría
+% \setlength{\parindent}{1em}Texto
+
+% % Quitar sangría
+% \noindent
+
+% % Punto
+% \CIRCLE \ \ \textbf{Texto} \emph{algo}
+% \begin{itemize}
+%   \item \textbf{Negrita:} Texto
+%   \item \textbf{Negrita:} Texto
+% \end{itemize}
+
+% % Introducir código
+% \begin{center}
+%   \begin{BVerbatim}
+%     ... Código
+%   \end{BVerbatim}
+% \end{center}
+
+% Poner una imagen
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[scale=0.55]{img/}
+%   \caption{Exportación de la base de datos en formato sql}
+%   \label{fig:exportación de la base de datos en formato sql}
+% \end{figure}
+
+% Poner dos imágenes
+% \begin{figure}[H]
+%   \begin{subfigure}{0.5\textwidth}
+%     \centering
+%     \includegraphics[scale=0.45]{img/}
+%     \caption{Texto imagen 1}
+%   \end{subfigure}%
+%   \begin{subfigure}{0.5\textwidth}
+%     \centering
+%     \includegraphics[scale=0.45]{img/}
+%     \caption{Texto imagen 2}
+%   \end{subfigure}
+%   \caption{Texto general}
+% \end{figure}
+
+% % Poner una tabla
+% \begin{table}[H]
+%   \centering
+%   \begin{tabular}{|c|c|c|c|}
+%     \hline
+%     \textbf{Campo 1} & \textbf{Campo 2} & \textbf{Campo 3} & \textbf{Campo 4} \\ \hline
+%     Texto & Texto & Texto & Texto \\ \hline
+%     Texto & Texto & Texto & Texto \\ \hline
+%     Texto & Texto & Texto & Texto \\ \hline
+%     Texto & Texto & Texto & Texto \\ \hline
+%   \end{tabular}
+%   \caption{Nombre de la tabla}
+%   \label{tab:nombre de la tabla}
+% \end{table}
+
+% % Poner codigo de un lenguaje a partir de un archivo
+% \lstset{style=mystyle}
+% The next code will be directly imported from a file
+% \lstinputlisting[language=Python]{code.py}
+
+% “Texto entre comillas dobles”
+
+%==============================================================================
+
+\begin{document}
+
+% Portada del informe
+% Portada del informe
+\title{Estudio de la influencia de la arquitectura y de la organización interna en el rendimiento}
+\subtitle{Diseño de Procesadores}
+\author{Carlos Pérez Fino \texttt{alu0101340333@ull.edu.es} \and Cheuk Kelly Ng Pante \texttt{alu0101364544@ull.edu.es}}
+\date{\today}
+
+\maketitle
+
+\pagestyle{empty} % Desactiva la numeración de página para el índice
+
+% Índice
+\tableofcontents
+
+% Nueva página
+\cleardoublepage
+
+\pagestyle{plain} % Vuelve a activar la numeración de página
+\setcounter{page}{1} % Reinicia el contador de página a 1
+
+% Secciones del informe
+% Capitulo 1
+\chapter{Introducción}
+El objetivo de este proyecto es abordar la implementación hardware de un procesador, en este caso el Nios II, que optimice el rendimiento
+en la resolución de un problema concreto, en este caso es la de aplicar un filtro de convolución sobre una imagen original.
+
+Para empezar el proyecto se ha hecho una actividad previa que fue la del tutorial sobre el desarrollo de Nios II y una vez finalizado el 
+tutorial se ha procedido a la realización de algunos programas de prueba para familiarizarse con el entorno de desarrollo y con el
+procesador Nios II. Tras probar que el entorno de desarrollo y el procesador funcionan correctamente se ha procedido a mejorar el diseño
+midiendo el rendimiento de cada mejora. Se llegó a la conclusión de que al introducir diferentes tipos de memoria este tardaba casi lo mismo
+para las diferentes mejoras. Para comprobar los tiempos se realizó el siguiente programa:
+\lstset{style=mystyle}
+\lstinputlisting[language=C]{./code/test_memories.c}
+
+% Capitulo 2
+\chapter{Desarrollo del filtro de convolución, filtro Gaussiano}
+Para el desarrollo del filtro de convolución se ha utilizado el filtro Gaussiano. El filtro Gaussiano es un filtro que se utiliza para
+suavizar una imagen. Se ha utilizado este filtro porque es un filtro que se utiliza mucho en el procesamiento de imágenes y es un filtro
+que se puede aplicar a cualquier imagen. El filtro Gaussiano se aplica a una imagen para suavizarla y eliminar el ruido de la imagen.
+
+\section{Implementación del filtro Gaussiano}
+Para la implementación del filtro Gaussiano se ha utilizado el siguiente código:
+\lstset{style=mystyle}
+\lstinputlisting[language=C]{./code/gaussian_filter.c}
+
+Este algoritmo se ha implementado en C y lo primero lo que se hace es definir el kernel del filtro Gaussiano. El kernel del filtro
+Gaussiano es una matriz de 3x3 que se utiliza para aplicar el filtro a la imagen. Tiene la siguiente forma:
+
+\begin{center}
+$\begin{bmatrix}
+  1 & 2 & 1 \\
+  2 & 4 & 2 \\
+  1 & 2 & 1 \\
+\end{bmatrix}$
+\end{center}
+
+Este kernel se utiliza para aplicar el filtro Gaussiano a la imagen. Para aplicar el filtro Gaussiano a la imagen se recorre la imagen
+y se aplica el filtro a cada píxel de la imagen. Para aplicar el filtro a un píxel se recorre la matriz del kernel y se multiplica cada
+elemento de la matriz por el píxel de la imagen correspondiente. Una vez se han multiplicado todos los elementos de la matriz del kernel
+por el píxel de la imagen se suman todos los resultados y se divide entre 16. El resultado de esta operación es el nuevo valor del píxel
+de la imagen que se está procesando.
+
+
+\end{document}

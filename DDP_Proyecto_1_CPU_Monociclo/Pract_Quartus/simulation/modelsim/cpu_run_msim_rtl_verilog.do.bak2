@@ -1,0 +1,14 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/CPU_base {C:/altera/13.0sp1/CPU_base/uc.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/CPU_base {C:/altera/13.0sp1/CPU_base/cpu.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/CPU_base {C:/altera/13.0sp1/CPU_base/cd.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/CPU_base {C:/altera/13.0sp1/CPU_base/alu.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/CPU_base {C:/altera/13.0sp1/CPU_base/memprog.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/CPU_base {C:/altera/13.0sp1/CPU_base/componentes.v}
+

@@ -1,0 +1,21 @@
+-- begin_signature
+-- interfaz_led
+-- end_signature
+WIDTH=6;
+DEPTH=10;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	9 :	000100;
+	8 :	001000;
+	7 :	010000;
+	6 :	100000;
+	5 :	010000;
+	4 :	001000;
+	3 :	001000;
+	2 :	000100;
+	1 :	000010;
+	0 :	000001;
+END;

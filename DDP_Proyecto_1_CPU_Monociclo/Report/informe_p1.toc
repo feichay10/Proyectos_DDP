@@ -1,0 +1,8 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Decisiones del diseño}{1}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Camino de datos}{1}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Codificación de las instrucciones}{2}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Características añadidas a diseño final}{3}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Programa}{4}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Demostración}{4}{chapter.7}%

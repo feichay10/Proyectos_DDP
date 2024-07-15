@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=/home/alumno/Escritorio/niosII_hw_dev_filter/software/gaussian_filter_base
+newSoftwareExampleWizardPage.sopcinfoFile=/home/alumno/Escritorio/niosII_hw_dev_filter/first_nios2_system.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=/home/alumno/Escritorio/niosII_hw_dev_filter/software/gaussian_filter_base_bsp

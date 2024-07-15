@@ -1,0 +1,44 @@
+module cd(input wire clk, reset, s_inc, s_inm, 
+          we3, wez, input wire [2:0] op_alu, 
+          output wire z, output wire [5:0] opcode);
+//Camino de datos de instrucciones de un solo ciclo
+  wire [15:0] instruccion;
+  wire [7:0] salidaAlu, wd3, rd1, rd2;
+  wire [9:0] DIR, outsum, outmux1;
+  wire zAlu;
+  assign opcode = instruccion[15:10];
+
+  alu alu1(rd1, rd2, op_alu,
+           salidaAlu, zAlu);
+
+  memprog mem(clk,
+               DIR,
+               instruccion);
+
+  sum suma(10'b1, DIR,
+             outsum);
+
+  mux2 #(10) multiplex1
+             (instruccion[9:0], outsum, 
+              s_inc, 
+              outmux1);
+
+  mux2 #(8) multiplex2
+             (salidaAlu, instruccion[11:4], 
+              s_inm, 
+              wd3);
+
+  registro #(10) pc
+              (clk, reset,
+               outmux1, 
+               DIR);
+
+  regfile bancoreg(clk, 
+               we3,           //se�al de habilitaci�n de escritura
+               instruccion[11:8], instruccion[7:4], instruccion[3:0], //direcciones de regs leidos y reg a escribir
+               wd3, 			 //dato a escribir
+               rd1, rd2);     //datos leidos
+
+  ffd ffd(clk, reset, zAlu, wez, z);
+
+endmodule

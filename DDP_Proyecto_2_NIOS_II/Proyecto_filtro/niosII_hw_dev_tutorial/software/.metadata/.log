@@ -1,0 +1,26 @@
+!SESSION 2024-05-06 15:13:13.642 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-06 15:18:32.375
+!MESSAGE Indexed 'prueba_filtro_bsp' (81 sources, 60 headers) in 1,22 sec: 953 declarations; 2.379 references; 117 unresolved inclusions; 5 syntax errors; 199 unresolved names (5,64%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-06 15:18:38.649
+!MESSAGE Indexed 'prueba_filtro' (1 sources, 13 headers) in 0,04 sec: 1 declarations; 1 references; 14 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00%)
+!SESSION 2024-05-06 22:17:34.980 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-06 22:18:42.517
+!MESSAGE Indexed 'filtro_gaussiano_bsp' (81 sources, 60 headers) in 0,94 sec: 953 declarations; 2.379 references; 117 unresolved inclusions; 5 syntax errors; 199 unresolved names (5,64%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-06 22:18:47.559
+!MESSAGE Indexed 'filtro_gaussiano' (0 sources, 13 headers) in 0,01 sec: 0 declarations; 0 references; 13 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00%)

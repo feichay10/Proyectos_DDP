@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="opcode[2]" source="Pin Planner" >
+		</pin>
+		<pin name="opcode[3]" source="Pin Planner" >
+		</pin>
+		<pin name="opcode[0]" source="Pin Planner" >
+		</pin>
+		<pin name="opcode[1]" source="Pin Planner" >
+		</pin>
+		<pin name="opcode[4]" source="Pin Planner" >
+		</pin>
+		<pin name="opcode[5]" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

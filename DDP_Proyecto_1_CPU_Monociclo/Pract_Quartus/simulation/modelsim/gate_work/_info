@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/alumno/Escritorio/PractQuartus/simulation/modelsim
+vcpu
+Ic96[COS^Db`6KVk`Nb5o03
+Vb0QUC:df5`;4>el<L:ZO10
+Z1 d/home/alumno/Escritorio/PractQuartus/simulation/modelsim
+w1720802559
+8cpu.vo
+Fcpu.vo
+L0 31
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+!i10b 1
+!s100 ;N^SBY=Z?AFBkCQh2aU6Y0
+!s85 0
+!s108 1720802843.832859
+!s107 cpu.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|cpu.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+vcpu_tb
+!i10b 1
+!s100 X>BK:hFli90G5>zIfXk:V0
+I=4Y4J=4Yf024?@zYP`hJL3
+V0P>[JOo>6KEkgKO=1CbUG0
+R1
+w1720792570
+8/home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v
+F/home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1720802843.957279
+!s107 /home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alumno/Escritorio/PractQuartus/../CPU_base|/home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+/home/alumno/Escritorio/PractQuartus/../CPU_base -O0

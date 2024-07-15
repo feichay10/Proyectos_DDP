@@ -1,0 +1,80 @@
+{ "Info" "IQEXE_SEPARATOR" "" "*******************************************************************" {  } {  } 3 0 "*******************************************************************" 0 0 "" 0 -1 1720802044516 ""}
+{ "Info" "IQEXE_START_BANNER_PRODUCT" "Shell Quartus II 32-bit " "Running Quartus II 32-bit Shell" { { "Info" "IQEXE_START_BANNER_VERSION" "Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition " "Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition" {  } {  } 0 0 "%1!s!" 0 0 "" 0 -1 1720802044517 ""} { "Info" "IQEXE_START_BANNER_TIME" "Fri Jul 12 17:34:04 2024 " "Processing started: Fri Jul 12 17:34:04 2024" {  } {  } 0 0 "Processing started: %1!s!" 0 0 "" 0 -1 1720802044517 ""}  } {  } 4 0 "Running %2!s! %1!s!" 0 0 "" 0 -1 1720802044517 ""}
+{ "Info" "IQEXE_START_BANNER_COMMANDLINE" "quartus_sh -t /opt/altera/12.1sp1/quartus/common/tcl/internal/nativelink/qnativesim.tcl --block_on_gui cpu cpu " "Command: quartus_sh -t /opt/altera/12.1sp1/quartus/common/tcl/internal/nativelink/qnativesim.tcl --block_on_gui cpu cpu" {  } {  } 0 0 "Command: %1!s!" 0 0 "" 0 -1 1720802044517 ""}
+{ "Info" "IQEXE_START_BANNER_TCL_ARGS" "--block_on_gui cpu cpu " "Quartus(args): --block_on_gui cpu cpu" {  } {  } 0 0 "Quartus(args): %1!s!" 0 0 "" 0 -1 1720802044517 ""}
+{ "Info" "0" "" "Info: Start Nativelink Simulation process" {  } {  } 0 0 "Info: Start Nativelink Simulation process" 0 0 "" 0 0 1720802044571 ""}
+{ "Info" "0" "" "Info: Starting NativeLink simulation with ModelSim-Altera software" {  } {  } 0 0 "Info: Starting NativeLink simulation with ModelSim-Altera software" 0 0 "" 0 0 1720802044635 ""}
+{ "Warning" "0" "" "Warning: File cpu_run_msim_gate_verilog.do already exists - backing up current file as cpu_run_msim_gate_verilog.do.bak7" {  } {  } 0 0 "Warning: File cpu_run_msim_gate_verilog.do already exists - backing up current file as cpu_run_msim_gate_verilog.do.bak7" 0 0 "" 0 0 1720802044673 ""}
+{ "Info" "0" "" "Info: Generated ModelSim-Altera script file /home/alumno/Escritorio/PractQuartus/simulation/modelsim/cpu_run_msim_gate_verilog.do" {  } { { "/home/alumno/Escritorio/PractQuartus/simulation/modelsim/cpu_run_msim_gate_verilog.do" "0" { Text "/home/alumno/Escritorio/PractQuartus/simulation/modelsim/cpu_run_msim_gate_verilog.do" 0 0 0 } }  } 0 0 "Info: Generated ModelSim-Altera script file /home/alumno/Escritorio/PractQuartus/simulation/modelsim/cpu_run_msim_gate_verilog.do" 0 0 "" 0 0 1720802044680 ""}
+{ "Info" "0" "" "Probing transcript" {  } {  } 0 0 "Probing transcript" 0 0 "" 0 0 1720802164493 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # do cpu_run_msim_gate_verilog.do " {  } {  } 0 0 "ModelSim-Altera Info: # do cpu_run_msim_gate_verilog.do " 0 0 "" 0 0 1720802164494 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # if \{\[file exists gate_work\]\} \{" {  } {  } 0 0 "ModelSim-Altera Info: # if \{\[file exists gate_work\]\} \{" 0 0 "" 0 0 1720802164494 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: #     vdel -lib gate_work -all" {  } {  } 0 0 "ModelSim-Altera Info: #     vdel -lib gate_work -all" 0 0 "" 0 0 1720802164494 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # \}" {  } {  } 0 0 "ModelSim-Altera Info: # \}" 0 0 "" 0 0 1720802164494 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # vlib gate_work" {  } {  } 0 0 "ModelSim-Altera Info: # vlib gate_work" 0 0 "" 0 0 1720802164494 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # vmap work gate_work" {  } {  } 0 0 "ModelSim-Altera Info: # vmap work gate_work" 0 0 "" 0 0 1720802164494 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Copying /opt/altera/12.1sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini" {  } {  } 0 0 "ModelSim-Altera Info: # Copying /opt/altera/12.1sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini" 0 0 "" 0 0 1720802164495 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Modifying modelsim.ini" {  } {  } 0 0 "ModelSim-Altera Info: # Modifying modelsim.ini" 0 0 "" 0 0 1720802164495 ""}
+{ "Warning" "0" "" "ModelSim-Altera Warning: # ** Warning: Copied /opt/altera/12.1sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini." {  } {  } 0 0 "ModelSim-Altera Warning: # ** Warning: Copied /opt/altera/12.1sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini." 0 0 "" 0 0 1720802164495 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: #          Updated modelsim.ini." {  } {  } 0 0 "ModelSim-Altera Info: #          Updated modelsim.ini." 0 0 "" 0 0 1720802164495 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # " {  } {  } 0 0 "ModelSim-Altera Info: # " 0 0 "" 0 0 1720802164495 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+. \{cpu.vo\}" {  } {  } 0 0 "ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+. \{cpu.vo\}" 0 0 "" 0 0 1720802164495 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012" {  } {  } 0 0 "ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012" 0 0 "" 0 0 1720802164496 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # -- Compiling module cpu" {  } {  } 0 0 "ModelSim-Altera Info: # -- Compiling module cpu" 0 0 "" 0 0 1720802164496 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # " {  } {  } 0 0 "ModelSim-Altera Info: # " 0 0 "" 0 0 1720802164496 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Top level modules:" {  } {  } 0 0 "ModelSim-Altera Info: # Top level modules:" 0 0 "" 0 0 1720802164496 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: #     cpu" {  } {  } 0 0 "ModelSim-Altera Info: #     cpu" 0 0 "" 0 0 1720802164496 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # " {  } {  } 0 0 "ModelSim-Altera Info: # " 0 0 "" 0 0 1720802164497 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+/home/alumno/Escritorio/PractQuartus/../CPU_base \{/home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v\}" {  } {  } 0 0 "ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+/home/alumno/Escritorio/PractQuartus/../CPU_base \{/home/alumno/Escritorio/PractQuartus/../CPU_base/cpu_tb.v\}" 0 0 "" 0 0 1720802164497 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012" {  } {  } 0 0 "ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012" 0 0 "" 0 0 1720802164497 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # -- Compiling module cpu_tb" {  } {  } 0 0 "ModelSim-Altera Info: # -- Compiling module cpu_tb" 0 0 "" 0 0 1720802164497 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # " {  } {  } 0 0 "ModelSim-Altera Info: # " 0 0 "" 0 0 1720802164497 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Top level modules:" {  } {  } 0 0 "ModelSim-Altera Info: # Top level modules:" 0 0 "" 0 0 1720802164497 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: #     cpu_tb" {  } {  } 0 0 "ModelSim-Altera Info: #     cpu_tb" 0 0 "" 0 0 1720802164498 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # " {  } {  } 0 0 "ModelSim-Altera Info: # " 0 0 "" 0 0 1720802164498 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # vsim -t 1ps +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs=\"+acc\"  cpu_tb" {  } {  } 0 0 "ModelSim-Altera Info: # vsim -t 1ps +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs=\"+acc\"  cpu_tb" 0 0 "" 0 0 1720802164498 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # vsim +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs=\\\"+acc\\\" -t 1ps cpu_tb " {  } {  } 0 0 "ModelSim-Altera Info: # vsim +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs=\\\"+acc\\\" -t 1ps cpu_tb " 0 0 "" 0 0 1720802164498 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Loading work.cpu_tb" {  } {  } 0 0 "ModelSim-Altera Info: # Loading work.cpu_tb" 0 0 "" 0 0 1720802164498 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Loading work.cpu" {  } {  } 0 0 "ModelSim-Altera Info: # Loading work.cpu" 0 0 "" 0 0 1720802164498 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_lcell_comb" {  } {  } 0 0 "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_lcell_comb" 0 0 "" 0 0 1720802164499 ""}
+{ "Error" "0" "" "ModelSim-Altera Error: # ** Error: (vsim-3009) \[TSCALE\] - Module 'cpu_tb' does not have a timeunit/timeprecision specification in effect, but other modules do." {  } {  } 0 0 "ModelSim-Altera Error: # ** Error: (vsim-3009) \[TSCALE\] - Module 'cpu_tb' does not have a timeunit/timeprecision specification in effect, but other modules do." 0 0 "" 0 0 1720802164499 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: #         Region: /cpu_tb/micpu/\\CaminoDeDatos\|alu1\|Add0~34 " {  } {  } 0 0 "ModelSim-Altera Info: #         Region: /cpu_tb/micpu/\\CaminoDeDatos\|alu1\|Add0~34 " 0 0 "" 0 0 1720802164499 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_lcell_ff" {  } {  } 0 0 "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_lcell_ff" 0 0 "" 0 0 1720802164499 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_io" {  } {  } 0 0 "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_io" 0 0 "" 0 0 1720802164499 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_mux21" {  } {  } 0 0 "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_mux21" 0 0 "" 0 0 1720802164499 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_dffe" {  } {  } 0 0 "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_dffe" 0 0 "" 0 0 1720802164500 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_asynch_io" {  } {  } 0 0 "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_asynch_io" 0 0 "" 0 0 1720802164500 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_clkctrl" {  } {  } 0 0 "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_clkctrl" 0 0 "" 0 0 1720802164500 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_mux41" {  } {  } 0 0 "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_mux41" 0 0 "" 0 0 1720802164500 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_ena_reg" {  } {  } 0 0 "ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_ena_reg" 0 0 "" 0 0 1720802164500 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Error loading design" {  } {  } 0 0 "ModelSim-Altera Info: # Error loading design" 0 0 "" 0 0 1720802164500 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # Error: Error loading design " {  } {  } 0 0 "ModelSim-Altera Info: # Error: Error loading design " 0 0 "" 0 0 1720802164500 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: #        Pausing macro execution " {  } {  } 0 0 "ModelSim-Altera Info: #        Pausing macro execution " 0 0 "" 0 0 1720802164501 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # MACRO ./cpu_run_msim_gate_verilog.do PAUSED at line 12" {  } {  } 0 0 "ModelSim-Altera Info: # MACRO ./cpu_run_msim_gate_verilog.do PAUSED at line 12" 0 0 "" 0 0 1720802164501 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: add wave -position end  vsim:/cpu_tb/clk" {  } {  } 0 0 "ModelSim-Altera Info: add wave -position end  vsim:/cpu_tb/clk" 0 0 "" 0 0 1720802164501 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: add wave -position end  vsim:/cpu_tb/reset" {  } {  } 0 0 "ModelSim-Altera Info: add wave -position end  vsim:/cpu_tb/reset" 0 0 "" 0 0 1720802164501 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: add wave -position end  vsim:/cpu_tb/ir1" {  } {  } 0 0 "ModelSim-Altera Info: add wave -position end  vsim:/cpu_tb/ir1" 0 0 "" 0 0 1720802164501 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: add wave -position end  vsim:/cpu_tb/opcode" {  } {  } 0 0 "ModelSim-Altera Info: add wave -position end  vsim:/cpu_tb/opcode" 0 0 "" 0 0 1720802164501 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: run" {  } {  } 0 0 "ModelSim-Altera Info: run" 0 0 "" 0 0 1720802164502 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # No Design Loaded!" {  } {  } 0 0 "ModelSim-Altera Info: # No Design Loaded!" 0 0 "" 0 0 1720802164502 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: run" {  } {  } 0 0 "ModelSim-Altera Info: run" 0 0 "" 0 0 1720802164502 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # No Design Loaded!" {  } {  } 0 0 "ModelSim-Altera Info: # No Design Loaded!" 0 0 "" 0 0 1720802164502 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: run" {  } {  } 0 0 "ModelSim-Altera Info: run" 0 0 "" 0 0 1720802164502 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # No Design Loaded!" {  } {  } 0 0 "ModelSim-Altera Info: # No Design Loaded!" 0 0 "" 0 0 1720802164502 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: run" {  } {  } 0 0 "ModelSim-Altera Info: run" 0 0 "" 0 0 1720802164503 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # No Design Loaded!" {  } {  } 0 0 "ModelSim-Altera Info: # No Design Loaded!" 0 0 "" 0 0 1720802164503 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: run" {  } {  } 0 0 "ModelSim-Altera Info: run" 0 0 "" 0 0 1720802164503 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # No Design Loaded!" {  } {  } 0 0 "ModelSim-Altera Info: # No Design Loaded!" 0 0 "" 0 0 1720802164503 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: run" {  } {  } 0 0 "ModelSim-Altera Info: run" 0 0 "" 0 0 1720802164503 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # No Design Loaded!" {  } {  } 0 0 "ModelSim-Altera Info: # No Design Loaded!" 0 0 "" 0 0 1720802164504 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: run -continue" {  } {  } 0 0 "ModelSim-Altera Info: run -continue" 0 0 "" 0 0 1720802164504 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # No Design Loaded!" {  } {  } 0 0 "ModelSim-Altera Info: # No Design Loaded!" 0 0 "" 0 0 1720802164504 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: run" {  } {  } 0 0 "ModelSim-Altera Info: run" 0 0 "" 0 0 1720802164504 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # No Design Loaded!" {  } {  } 0 0 "ModelSim-Altera Info: # No Design Loaded!" 0 0 "" 0 0 1720802164504 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: run" {  } {  } 0 0 "ModelSim-Altera Info: run" 0 0 "" 0 0 1720802164504 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # No Design Loaded!" {  } {  } 0 0 "ModelSim-Altera Info: # No Design Loaded!" 0 0 "" 0 0 1720802164504 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: run" {  } {  } 0 0 "ModelSim-Altera Info: run" 0 0 "" 0 0 1720802164505 ""}
+{ "Info" "0" "" "ModelSim-Altera Info: # No Design Loaded!" {  } {  } 0 0 "ModelSim-Altera Info: # No Design Loaded!" 0 0 "" 0 0 1720802164505 ""}
+{ "Error" "0" "" "Errors encountered while running modelsim do file" {  } {  } 0 0 "Errors encountered while running modelsim do file" 0 0 "" 0 0 1720802164606 ""}
+{ "Error" "0" "" "Error: NativeLink simulation flow was NOT successful" {  } {  } 0 0 "Error: NativeLink simulation flow was NOT successful" 0 0 "" 0 0 1720802164606 ""}
+{ "Info" "0" "" "Info: For messages from NativeLink scripts, check the file /home/alumno/Escritorio/PractQuartus/cpu_nativelink_simulation.rpt" {  } { { "/home/alumno/Escritorio/PractQuartus/cpu_nativelink_simulation.rpt" "0" { Text "/home/alumno/Escritorio/PractQuartus/cpu_nativelink_simulation.rpt" 0 0 0 } }  } 0 0 "Info: For messages from NativeLink scripts, check the file /home/alumno/Escritorio/PractQuartus/cpu_nativelink_simulation.rpt" 0 0 "" 0 0 1720802164606 ""}
